@@ -5,7 +5,7 @@ function theta = logisticRegressionGradientDescent(X, y, theta, alpha, num_iters
     m = length(y);
 
     z = X * theta;
-    h = sigmoid(-z);
+    h = sigmoid(z);
     for iter = 1:num_iters
         grad = 1 / m * ((h - y)' * X)';
         theta = theta - alpha * grad;

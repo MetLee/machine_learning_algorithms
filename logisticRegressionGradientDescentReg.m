@@ -6,7 +6,7 @@ function theta = logisticRegressionGradientDescentReg(X, y, theta, alpha, lambda
     n_plus_1 = size(X, 2);
 
     z = X * theta;
-    h = sigmoid(-z);
+    h = sigmoid(z);
     X_without_X0 = X(:, [2:n_plus_1]);
     theta_without_theta0 = theta(2:n_plus_1); % do not regularize theta(1)
     for iter = 1:num_iters
