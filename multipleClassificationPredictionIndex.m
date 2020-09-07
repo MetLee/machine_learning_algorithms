@@ -1,13 +1,10 @@
-function p = oneVsAllPrediction(X, theta)
+function p = multipleClassificationPredictionIndex(h)
 
     % Compute the prediction (the index of the max element).
 
-    m = size(X, 1);
-    num_labels = size(theta, 2);
+    m = size(h, 1);
     p = zeros(m, 1);
 
-    z = X * theta;
-    h = sigmoid(z);
     for i = 1:m
         [val, ind] = max(h(i, :));
         p(i) = ind;
