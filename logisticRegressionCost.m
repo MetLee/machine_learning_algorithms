@@ -1,6 +1,6 @@
-function J = logisticRegressionCost(X, y, theta)
+function [J, grad] = logisticRegressionCost(X, y, theta)
 
-    % Compute the cost of logistic regression algorithm.
+    % Compute the cost and the gradient of logistic regression algorithm.
 
     m = length(y);
     
@@ -8,5 +8,7 @@ function J = logisticRegressionCost(X, y, theta)
     h = sigmoid(z);
     costMatrix = - y .* log(h) - (1 - y) .* log(1 - h);
     J = 1 / m * sum(costMatrix);
+
+    grad = 1 / m * ((h - y)' * X)';
 
 end
