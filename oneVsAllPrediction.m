@@ -7,8 +7,9 @@ function p = oneVsAllPrediction(X, theta)
     p = zeros(m, 1);
 
     z = X * theta;
+    h = sigmoid(z);
     for i = 1:m
-        [val, ind] = max(z(i, :));
+        [val, ind] = max(h(i, :));
         p(i) = ind;
     end
 
