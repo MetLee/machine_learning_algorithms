@@ -10,7 +10,7 @@ function rst = plotLearningCurve(X, y, X_cv, y_cv, costFunction, lambda)
 
     [error_train, error_cv] = learningCurve(X, y, X_cv, y_cv, costFunction, lambda);
     plot(1:m, error_train, 1:m, error_cv);
-    title('Learning curve for linear regression');
+    title('Learning curve');
     legend('Train', 'Cross Validation');
     xlabel('Number of training examples');
     ylabel('Error');
