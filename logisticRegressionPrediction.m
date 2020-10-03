@@ -3,7 +3,7 @@ function p = logisticRegressionPrediction(X, theta, threshold)
     % Compute the prediction.
 
     if nargin == 2
-        threshold = 0.5
+        threshold = 0.5;
     end
 
     m = size(X, 1);
