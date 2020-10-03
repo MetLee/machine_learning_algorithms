@@ -1,6 +1,6 @@
 function rst = plotLearningCurve(X, y, X_cv, y_cv, costFunction, lambda)
 
-    % plot the learning curve.
+    % Plot the learning curve.
 
     if nargin == 5
         lambda = 0;
