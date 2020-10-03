@@ -1,6 +1,10 @@
-function [error_train, error_cv] = learningCurve(X, y, X_cv, y_cv, lambda, costFunction)
+function [error_train, error_cv] = learningCurve(X, y, X_cv, y_cv, costFunction, lambda)
 
     % Generate the train and cross validation set errors needed to plot a learning curve.
+
+    if nargin == 5
+        lambda = 0;
+    end
 
     m = size(X, 1);
     error_train = zeros(m, 1);

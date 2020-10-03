@@ -1,4 +1,4 @@
-function [error_train, error_cv] = validationCurve(X, y, X_cv, y_cv, lambda_vec, costFunction)
+function [error_train, error_cv] = validationCurve(X, y, X_cv, y_cv, costFunction, lambda_vec)
 
     % Generate the train and cross validation set errors needed to plot a validation curve for selecting lambda.
 
